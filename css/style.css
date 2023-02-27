@@ -1,0 +1,59 @@
+/*
+RESET
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+COMMON
+*/
+
+body{
+    background-color: coral;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    height: 300px;
+    width: 700px;
+    background-color: blueviolet;
+    position: relative;
+}
+
+.left, .right{
+    position: absolute;
+    background-color: red;
+    right: 50%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.left{
+    top: 20px;
+}
+
+.right{
+    bottom: 20px;
+}
+
+.item{
+    height: 100%;
+}
+
+.item img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
