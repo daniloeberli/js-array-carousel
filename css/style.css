@@ -12,9 +12,6 @@ RESET
 COMMON
 */
 
-body{
-    background-color: coral;
-}
 
 .container{
     max-width: 900px;
@@ -28,16 +25,19 @@ body{
 .slider{
     height: 300px;
     width: 700px;
-    background-color: blueviolet;
     position: relative;
 }
 
 .prev, .next{
     position: absolute;
-    background-color: red;
+    background-color: lightgray;
     right: 50%;
     z-index: 5;
     cursor: pointer;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
 }
 
 .prev{

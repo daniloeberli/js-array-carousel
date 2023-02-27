@@ -1,15 +1,9 @@
 "use strict"
 
-/*
-<div class="item show"><img src="img/01.webp" alt="img-1"></div>
-            <div class="left">left</div>
-            <div class="right">right</div>
-*/
+const imgs = ['01.webp','02.webp','03.webp','04.webp','05.webp']; // array che contiene le nostre immagini
 
-const imgs = ['01.webp','02.webp','03.webp','04.webp','05.webp'];
-
-let itemsContent = '';
-let active = 0;
+let itemsContent = ''; // stringa che serve per costruire la struttura
+let active = 0; //posizione di partenza del carosello
 
 const slider = document.querySelector('.slider');
 
@@ -19,7 +13,26 @@ for(let i =0; i < imgs.length; i++ ){
 }
 
 slider.innerHTML += itemsContent;
-document.querySelector('.item').classList.add('show');
 
-const prev = document.querySelector('prev');
-const next = document.querySelector('next');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+const items = document.querySelectorAll('.item');
+items[active].classList.add('show');
+
+
+prev.addEventListener('click',function(){
+    if(active > 0){
+        items[active].classList.remove('show');
+        active--;
+        items[active].classList.add('show');
+    }
+})
+
+next.addEventListener('click',function(){
+    if(active < items.length - 1){
+        items[active].classList.remove('show');
+        active++;
+        items[active].classList.add('show');
+    }
+})
