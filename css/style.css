@@ -50,6 +50,11 @@ body{
 
 .item{
     height: 100%;
+    display: none;
+}
+
+.show{
+    display: block;
 }
 
 .item img{
